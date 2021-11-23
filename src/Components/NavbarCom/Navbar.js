@@ -13,19 +13,19 @@ const Navbar = () => {
                             <img src={photo} alt="site-logo"/>
 
                             <ul>
-                                <li><Link to="#">O’ZBEKISTON</Link></li>
-                                <li><Link to="#">JAHON</Link></li>
-                                <li><Link to="#">IQTISODIYOT</Link></li>
-                                <li><Link to="#">JAMIYAT</Link></li>
-                                <li><Link to="#">TEXNOLOGIYA</Link></li>
+                                <li><Link to="#">O’ZBEKISTON</Link></li> <br/>
+                                <li><Link to="#">JAHON</Link></li> <br/>
+                                <li><Link to="#">IQTISODIYOT</Link></li> <br/>
+                                <li><Link to="#">JAMIYAT</Link></li> <br/>
+                                <li><Link to="#">TEXNOLOGIYA</Link></li> <br/>
                                 <li><Link to="#">SPORT</Link></li>
                             </ul>
                         </div>
                         <div className="grade2">
                             <select>
-                                <option value="Uzbek">Uzbekcha</option>
-                                <option value="Russian">Ruscha</option>
-                                <option value="English">Inglizcha</option>
+                                <option value="Uzbek">Uz</option>
+                                <option value="Russian">Ru</option>
+                                <option value="English">En</option>
                             </select>
                             <i className="fas fa-bars menu-icon"/>
                             <i className="fas fa-search search-icon"/>
@@ -72,7 +72,7 @@ const Nav = styled.div`
             cursor: pointer;
 
             &:hover {
-              color: #0C2F75;
+              color: rgba(4, 4, 183, 0.81);
             }
           }
         }
@@ -110,6 +110,9 @@ const Nav = styled.div`
       }
     }
   }
+
+
+  //MEDIA QUERIES
 
   @media (max-width: 1050px) {
     .container {
@@ -172,10 +175,25 @@ const Nav = styled.div`
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 544px) {
+    .container {
+      max-width: 500px;
+      margin: 0 20px;
+
+      .navbar {
+        .grade1 {
+          ul {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 376px) {
     .container {
       max-width: 300px;
-      margin: auto;
+      margin: auto 2%;
 
       .navbar {
 
@@ -183,12 +201,17 @@ const Nav = styled.div`
 
           ul {
             display: none;
+
           }
         }
-        
+
         .grade2 {
           .search-icon {
             display: none;
+          }
+
+          .menu-icon {
+            padding-left: 100px;
           }
         }
 
@@ -197,6 +220,7 @@ const Nav = styled.div`
     }
 
   }
+
 
 `
 
