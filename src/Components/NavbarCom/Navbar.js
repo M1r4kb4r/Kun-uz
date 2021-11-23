@@ -13,12 +13,12 @@ const Navbar = () => {
                             <img src={photo} alt="site-logo"/>
 
                             <ul>
-                                <li><Link to="#">O’ZBEKISTON</Link></li> <br/>
-                                <li><Link to="#">JAHON</Link></li> <br/>
-                                <li><Link to="#">IQTISODIYOT</Link></li> <br/>
-                                <li><Link to="#">JAMIYAT</Link></li> <br/>
-                                <li><Link to="#">TEXNOLOGIYA</Link></li> <br/>
-                                <li><Link to="#">SPORT</Link></li>
+                                <li><Link to="/">O’ZBEKISTON</Link></li> <br/>
+                                <li><Link to="/">JAHON</Link></li> <br/>
+                                <li><Link to="/">IQTISODIYOT</Link></li> <br/>
+                                <li><Link to="/">JAMIYAT</Link></li> <br/>
+                                <li><Link to="/">TEXNOLOGIYA</Link></li> <br/>
+                                <li><Link to="/">SPORT</Link></li>
                             </ul>
                         </div>
                         <div className="grade2">
