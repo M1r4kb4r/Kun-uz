@@ -50,21 +50,29 @@ const About = () => {
                             </div>
 
                             <div className="download-links">
-                                <div className="play-market">
-                                    <i className="fab fa-google-play"></i>
-                                    <div className="play-market-texts">
-                                        <p>Get it on</p>
-                                        <h1>Google Play</h1>
-                                    </div>
-                                </div>
+                                <a target="_blank" href="https://play.google.com/store">
 
-                                <div className="app-store">
-                                    <i className="fab fa-app-store-ios"></i>
-                                    <div className="app-store-texts">
-                                        <p>Download from the</p>
-                                        <h1>App Store</h1>
+                                    <div className="play-market">
+                                        <i className="fab fa-google-play"></i>
+                                        <div className="play-market-texts">
+                                            <p>Get it on</p>
+                                            <h1>Google Play</h1>
+                                        </div>
                                     </div>
-                                </div>
+
+                                </a>
+
+                                <a target="_blank" href="https://www.apple.com/ru/app-store/">
+
+                                    <div className="app-store">
+                                        <i className="fab fa-app-store-ios"></i>
+                                        <div className="app-store-texts">
+                                            <p>Download from the</p>
+                                            <h1>App Store</h1>
+                                        </div>
+                                    </div>
+
+                                </a>
                             </div>
                         </div>
 
@@ -186,13 +194,30 @@ const AboutWrapper = styled.div`
           align-items: center;
           margin-top: 20px;
           
+          a {
+            text-decoration: none;
+          }
+          
           .play-market {
-            width: 150px;
+            width: auto;
+            height: 50px;
             display: flex;
             align-items: center;
             flex-direction: row;
             background: #0C2F75;
             padding: 10px 15px;
+            border: 2px solid #0C2F75;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+
+
+            &:hover {
+              background: #fff;
+              
+              .play-market-texts , i {
+                color: #0C2F75;
+              }
+            }
 
             .play-market-texts {
               font-family: Gilroy;
@@ -201,22 +226,46 @@ const AboutWrapper = styled.div`
               font-size: 8px;
               color: #FFFFFF;
               
+              p {
+                font-size: 13px;
+              }
+              
+              h1 {
+                font-size: 20px;
+              }
             }
 
             i {
               color: #fff;
+              font-size: 25px;
               margin-right: 10px;
             }
           }
 
+          a {
+            text-decoration: none;
+          }
+          
           .app-store {
-            width: 150px;
+            width: auto;
+            height: 50px;
             display: flex;
             align-items: center;
             flex-direction: row;
             background: #0C2F75;
             margin-left: 20px;
             padding: 10px 15px;
+            border: 2px solid #0C2F75;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+              background: #fff;
+
+              .app-store-texts , i {
+                color: #0C2F75;
+              }
+            }
 
             .app-store-texts {
               font-family: Gilroy;
@@ -225,11 +274,22 @@ const AboutWrapper = styled.div`
               font-size: 8px;
               color: #FFFFFF;
 
+              
+              
             }
 
             i {
               color: #fff;
+              font-size: 30px;
               margin-right: 10px;
+            }
+
+            p {
+              font-size: 11px;
+            }
+
+            h1 {
+              font-size: 20px;
             }
           }
         }
@@ -239,11 +299,18 @@ const AboutWrapper = styled.div`
       .about-page-bottom-infos {
         
         .about-page-bt-all-texts {
+          font-family: 'Montserrat';
           font-style: normal;
           font-weight: 500;
           font-size: 16px;
           color: #000000;
           margin: 20px 0;
+          cursor: pointer;
+          transition: 0.5s ease-in-out;
+          
+          &:hover {
+            color: #0C2F75;
+          }
         }
       }
       

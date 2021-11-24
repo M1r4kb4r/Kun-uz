@@ -30,7 +30,7 @@ const NotFoundWrapper = styled.div`
   flex-direction: column;
 
   img {
-    height: 41vh;
+    height: 40.5vh;
     margin-top: 90px;
   }
   

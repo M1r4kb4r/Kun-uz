@@ -13,7 +13,7 @@ const Footer = () => {
                             <ul>
                                 <li><Link to="/about">Sayt haqida</Link></li>
                                 <li><Link to="/">RSS</Link></li>
-                                <li><Link to="/">Aloqa</Link></li>
+                                <li><Link to="/contact">Aloqa</Link></li>
                                 <li><Link to="/">Reklama</Link></li>
                                 <li><Link to="/">Kun mavzulari</Link></li>
                                 <li><Link to="/">Kun.uz jamoasi</Link></li>
