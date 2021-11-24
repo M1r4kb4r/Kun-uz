@@ -10,15 +10,22 @@ const Navbar = () => {
                 <div className="container">
                     <div className="navbar">
                         <div className="grade1">
-                            <img src={photo} alt="site-logo"/>
+                            <Link to="/">
+                                <img src={photo} alt="site-logo"/>
+                            </Link>
 
                             <ul>
-                                <li><Link to="/">O’ZBEKISTON</Link></li> <br/>
-                                <li><Link to="/">JAHON</Link></li> <br/>
-                                <li><Link to="/">IQTISODIYOT</Link></li> <br/>
-                                <li><Link to="/">JAMIYAT</Link></li> <br/>
-                                <li><Link to="/">TEXNOLOGIYA</Link></li> <br/>
-                                <li><Link to="/">SPORT</Link></li>
+                                <li><Link to="NotFound">O’ZBEKISTON</Link></li>
+                                <br/>
+                                <li><Link to="NotFound">JAHON</Link></li>
+                                <br/>
+                                <li><Link to="NotFound">IQTISODIYOT</Link></li>
+                                <br/>
+                                <li><Link to="NotFound">JAMIYAT</Link></li>
+                                <br/>
+                                <li><Link to="NotFound">TEXNOLOGIYA</Link></li>
+                                <br/>
+                                <li><Link to="NotFound">SPORT</Link></li>
                             </ul>
                         </div>
                         <div className="grade2">

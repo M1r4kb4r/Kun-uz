@@ -529,25 +529,6 @@ const Home = () => {
                     </section>
 
                 </div>
-                <section className="footer">
-                    <div className="footer-top-part ">
-                        <div className="footer-top-info container">
-                            <ul>
-                                <li><Link to="/">Sayt haqida</Link></li>
-                                <li><Link to="/">RSS</Link></li>
-                                <li><Link to="/">Aloqa</Link></li>
-                                <li><Link to="/">Reklama</Link></li>
-                                <li><Link to="/">Kun mavzulari</Link></li>
-                                <li><Link to="/">Kun.uz jamoasi</Link></li>
-                            </ul>
-
-                            <a href="$">
-                                <img className="notAllowedImg" src={notAllowedIcon} alt="18+"/>
-                            </a>
-
-                        </div>
-                    </div>
-                </section>
 
             </HomeWrapper>
 
@@ -763,50 +744,6 @@ const HomeWrapper = styled.div`
         }
       }
 
-    }
-  }
-
-  .footer {
-    margin-top: 50px;
-
-    .footer-top-part {
-      width: 100%;
-      height: 54px;
-      display: flex;
-      align-items: center;
-      background: #1C2680;
-
-      .footer-top-info {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        ul {
-          display: flex;
-          list-style-type: none;
-
-          li {
-
-            a {
-              font-family: 'Montserrat';
-              font-style: normal;
-              font-weight: bold;
-              font-size: 15px;
-              color: #FFFFFF;
-              text-decoration: none;
-              padding: 18px;
-              margin: 0 25px;
-              cursor: pointer;
-              transition: 1s ease-in-out;
-
-
-              &:hover {
-                text-decoration: underline;
-              }
-            }
-          }
-        }
-      }
     }
   }
 
