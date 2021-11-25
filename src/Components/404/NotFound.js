@@ -7,7 +7,9 @@ const NotFound = () => {
     return (
         <div>
             <NotFoundWrapper>
-                <img src={notFoundImg} alt="image"/>
+                <div className="img-wrapper">
+                    <img className="main-img" src={notFoundImg} alt="image"/>
+                </div>
                 <h1 className="error-header">Xatolik yuz berdi. Sahifa topilmadi :(</h1>
 
                 <Link to="/">
@@ -29,24 +31,31 @@ const NotFoundWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  img {
-    height: 40.5vh;
-    margin-top: 90px;
+  .img-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .main-img {
+      height: 40.5vh;
+      width: 100%;
+      margin-top: 90px;
+    }
   }
-  
+
+
   .error-header {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
-    color: #000000;  
+    color: #000000;
     margin: 40px 0;
   }
-  
+
   a {
     text-decoration: none;
     margin-top: 10px;
-    
+
     .not-found-link {
 
       display: flex;
@@ -58,14 +67,13 @@ const NotFoundWrapper = styled.div`
 
       &:hover {
         background: #1C2680;
-        
+
         i, h1 {
           color: #fff;
         }
-          
+
       }
 
-      
 
       i {
         color: #1C2680;
@@ -82,10 +90,34 @@ const NotFoundWrapper = styled.div`
       }
 
     }
-    
-    
+
+
   }
-  
+
+
+  @media (max-width: 1025px) {
+
+    .error-header {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 421px) {
+
+    .error-header {
+      font-size: 14px;
+    }
+
+    .not-found-link {
+      flex-direction: column;
+
+      h1 {
+        text-align: center;
+      }
+    }
+
+  }
 `
 
 export default NotFound;

@@ -15,7 +15,6 @@ const Footer = () => {
                                 <li><a target="_blank" href="https://kun.uz/news/rss">RSS</a></li>
                                 <li><Link to="/contact">Aloqa</Link></li>
                                 <li><Link to="/ad-page">Reklama</Link></li>
-                                <li><Link to="/">Kun mavzulari</Link></li>
                                 <li><Link to="/">Kun.uz jamoasi</Link></li>
                             </ul>
 
@@ -69,14 +68,14 @@ const Footer = () => {
     );
 };
 
-const FooterWrapper = styled.div `
+const FooterWrapper = styled.div`
 
   .footer {
     margin-top: 50px;
 
     .footer-top-part {
-      width: 100%;
-      height: 54px;
+      height: auto;
+      padding: 10px 0;
       display: flex;
       align-items: center;
       background: #1C2680;
@@ -85,7 +84,7 @@ const FooterWrapper = styled.div `
         max-width: 1336px;
         margin: 0 auto;
       }
-      
+
       .footer-top-info {
         display: flex;
         align-items: center;
@@ -123,9 +122,8 @@ const FooterWrapper = styled.div `
       max-width: 1336px;
       margin: 0 auto;
     }
-    
+
     .footer-bottom-part {
-      width: 100%;
       background: #17206A;
 
       .footer-bottom-part-info {
@@ -133,7 +131,6 @@ const FooterWrapper = styled.div `
         align-items: center;
 
         .footer-cards {
-          width: 100%;
           margin: 20px 0;
           padding: 0 20px;
 
@@ -174,7 +171,78 @@ const FooterWrapper = styled.div `
     }
   }
 
+  @media (max-width: 1025px) {
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
+    .footer-top-info {
+      width: auto;
+      height: auto;
+      padding: 10px 0;
+
+      img {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 30px;
+        flex-direction: column;
+
+      }
+    }
+
+    .footer-bottom-part {
+      .footer-bottom-part-info {
+
+        flex-direction: column;
+
+      }
+
+
+    }
+  }
+
+
+  @media (max-width: 350px) {
+
+    .footer-bottom-part {
+
+      .footer-bottom-part-info {
+
+        .footer-cards:nth-child(2) {
+          display: none;
+        }
+      }
+
+    }
+  }
+  
+  @media (max-width: 230px) {
+    .footer {
+      
+      .footer-top-part {
+        
+        .footer-top-info {
+          
+          ul {
+            
+            li {
+              
+              a {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
 `
 
 export default Footer;
