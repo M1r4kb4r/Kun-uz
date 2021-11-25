@@ -8,6 +8,8 @@ import Policy from "./Components/PolicyCom/Policy";
 import Navbar from "./Components/NavbarCom/Navbar";
 import NotFound from "./Components/404/NotFound";
 import Footer from "./Components/Footer/Footer";
+import Younger from "./Components/18+/Younger";
+import AdPage from "./Components/AdPage/AdPage";
 
 function App() {
   return (
@@ -21,7 +23,8 @@ function App() {
       <Route path="/policy" element={<Policy/>}/>
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/notFound" element={<NotFound/>}/>
-
+      <Route path="/18+" element={<Younger/>}/>
+      <Route path="/ad-page" element={<AdPage/>}/>
     </Routes>
 
   <Footer/>

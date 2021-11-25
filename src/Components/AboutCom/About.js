@@ -50,7 +50,7 @@ const About = () => {
                             </div>
 
                             <div className="download-links">
-                                <a target="_blank" href="https://play.google.com/store">
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=uz.kun.app">
 
                                     <div className="play-market">
                                         <i className="fab fa-google-play"></i>
@@ -62,7 +62,7 @@ const About = () => {
 
                                 </a>
 
-                                <a target="_blank" href="https://www.apple.com/ru/app-store/">
+                                <a target="_blank" href="https://apps.apple.com/us/app/kun-uz/id1042740093">
 
                                     <div className="app-store">
                                         <i className="fab fa-app-store-ios"></i>

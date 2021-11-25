@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 const Contact = () => {
     return (
@@ -16,11 +17,17 @@ const Contact = () => {
 
                         <div className="contact-box-wrapper">
                             <div className="contact-boxes">
-                                <input className="myInput" type="text" placeholder="Name"/>
-                                <input className="myInput" type="text" placeholder="Email"/>
-                                <input className="myInput" type="text" placeholder="Phone Number"/>
-                                <input className="myInput" type="text" placeholder="Theme"/>
-                                <input className="myInput" type="text" placeholder="Message"/>
+                                <form action="" method="POST">
+                                    <input className="myInput" type="text" placeholder="Name" required/>
+                                    <input className="myInput" type="text" placeholder="Email" required/>
+                                    <input className="myInput" type="text" placeholder="Phone Number" required/>
+                                    <input className="myInput" type="text" placeholder="Theme" required/>
+                                    <div className="bottom-inputs">
+                                        <input className="myInput message-input" type="text" placeholder="Message"
+                                               required/>
+                                        <input className="submit-btn" type="submit" value="Yuborish"/>
+                                    </div>
+                                </form>
                             </div>
                             <div className="contact-boxes">
                                 <div className="visit-card-wrapper">
@@ -45,7 +52,7 @@ const Contact = () => {
 
                                     <div className="visit-card-groups">
                                         <h1>Mobil ilovalarimiz:</h1>
-                                        <a href="https://play.google.com/store">
+                                        <a target="_blank" href="https://play.google.com/store/apps/details?id=uz.kun.app">
                                             <div className="play-market markets">
                                                 <i className="fab fa-google-play"></i>
                                                 <div className="play-market-texts">
@@ -55,7 +62,7 @@ const Contact = () => {
                                             </div>
                                         </a>
 
-                                        <a href="https://www.apple.com/ru/app-store/">
+                                        <a target="_blank" href="https://apps.apple.com/us/app/kun-uz/id1042740093">
                                             <div className="app-store markets">
                                                 <i className="fab fa-app-store-ios"></i>
                                                 <div className="app-store-texts">
@@ -128,6 +135,15 @@ const ContactWrapper = styled.div`
             }
           }
 
+          .bottom-inputs {
+            display: flex;
+            flex-direction: column;
+            
+          }
+          .message-input {
+            padding-bottom: 120px;
+          }
+
           .myInput::placeholder {
             font-family: 'Montserrat';
             font-style: normal;
@@ -136,6 +152,27 @@ const ContactWrapper = styled.div`
             color: #000000;
             opacity: 0.5;
           }
+
+          .submit-btn {
+            width: 150px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            color: #FFFFFF;
+            background: #17206A;
+            border-radius: 5px;
+            border: 2px solid #17206A;
+            padding: 11px 43px;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+              background: #fff;
+              color: #17206A;
+            }
+          }
+
 
           .visit-card-wrapper {
             border: 2px solid silver;
@@ -175,15 +212,15 @@ const ContactWrapper = styled.div`
                 padding: 5px 8px;
                 cursor: pointer;
                 transition: 0.5s ease-in-out;
-                
+
                 &:hover {
                   background: #0C2F75;
-                  
+
                   .market-texts, .market-header, i {
                     color: #fff;
                   }
                 }
-                
+
                 .market-texts {
                   font-family: 'Montserrat';
                   font-style: normal;
@@ -191,7 +228,7 @@ const ContactWrapper = styled.div`
                   font-size: 8px;
                   color: #0C2F75;
                 }
-                
+
                 .market-header {
                   font-family: 'Montserrat';
                   font-style: normal;
@@ -199,13 +236,13 @@ const ContactWrapper = styled.div`
                   font-size: 15px;
                   color: #0C2F75;
                 }
-                
+
                 i {
                   font-size: 25px;
                   padding-right: 10px;
                 }
               }
-              
+
               .visit-card-groups-icons {
 
                 i {
@@ -217,7 +254,7 @@ const ContactWrapper = styled.div`
                   &:hover {
                     color: blue;
                   }
-                  
+
                 }
               }
 

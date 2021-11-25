@@ -12,16 +12,16 @@ const Footer = () => {
                         <div className="footer-top-info container">
                             <ul>
                                 <li><Link to="/about">Sayt haqida</Link></li>
-                                <li><Link to="/">RSS</Link></li>
+                                <li><a target="_blank" href="https://kun.uz/news/rss">RSS</a></li>
                                 <li><Link to="/contact">Aloqa</Link></li>
-                                <li><Link to="/">Reklama</Link></li>
+                                <li><Link to="/ad-page">Reklama</Link></li>
                                 <li><Link to="/">Kun mavzulari</Link></li>
                                 <li><Link to="/">Kun.uz jamoasi</Link></li>
                             </ul>
 
-                            <a href="$">
+                            <Link to="/18+">
                                 <img className="notAllowedImg" src={notAllowedIcon} alt="18+"/>
-                            </a>
+                            </Link>
 
                         </div>
                     </div>
