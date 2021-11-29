@@ -70,8 +70,13 @@ const Footer = () => {
 
 const FooterWrapper = styled.div`
 
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  
   .footer {
-    margin-top: 50px;
+    margin-top: 100px;
 
     .footer-top-part {
       height: auto;

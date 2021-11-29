@@ -17,6 +17,7 @@ const Home = () => {
         <div>
 
             <HomeWrapper>
+
                 <div className="container">
 
                     <section className="part-one">
@@ -124,6 +125,7 @@ const Home = () => {
                         </div>
 
                         <div className="part-two-wrapper">
+
                             <div className="part-two-cards">
                                 <img src={part_tow_all_images} alt="image"/>
                                 <div className="uploaded-dates">
