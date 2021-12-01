@@ -29,8 +29,8 @@ const AdWrapper = styled.div`
     padding: 0 150px;
 
     .ad-wrapper {
-      height: 60vh;
-
+      height: 62vh;
+      margin-top: 100px;
     }
 
     .ad-header {

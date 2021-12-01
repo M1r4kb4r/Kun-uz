@@ -67,7 +67,7 @@ const YoungerWrapper = styled.div`
       font-size: 20px;
       color: #0C2F75;
       text-align: center;
-      margin-top: 66px;
+      margin-top: 100px;
     }
 
 

@@ -152,7 +152,7 @@ const AboutWrapper = styled.div`
       align-items: center;
       justify-content: center;
       flex-direction: column;
-
+      margin-top: 50px;
 
       .about-page-top-header {
         font-family: 'Montserrat';

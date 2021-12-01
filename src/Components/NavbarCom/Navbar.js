@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import photo from "../../images/site-logo.png";
 import {Link} from "react-router-dom";
 import styled from "styled-components";
+import {FaBars, FaTimes} from "react-icons/all";
 
 const Navbar = () => {
+
+    const [click, setClick] = useState( false);
+
+    const handleClick = () => {
+        setClick(!click)
+    }
+
+
     return (
         <div>
             <Nav>
@@ -14,7 +23,7 @@ const Navbar = () => {
                                 <img src={photo} alt="site-logo"/>
                             </Link>
 
-                            <ul>
+                            <ul className={click ? 'nav-menu-active' : 'nav-menu'}>
                                 <li><Link to="NotFound">O’ZBEKISTON</Link></li>
                                 <br/>
                                 <li><Link to="NotFound">JAHON</Link></li>
@@ -29,13 +38,11 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <div className="grade2">
-                            <select>
-                                <option value="Uzbek">Uz</option>
-                                <option value="Russian">Ru</option>
-                                <option value="English">En</option>
-                            </select>
-                            <i className="fas fa-bars menu-icon"/>
-                            <i className="fas fa-search search-icon"/>
+                            <input className="nav-input" type="text" placeholder="Search..."/>
+                            <div className="menu-icon" onClick={handleClick}>
+                                {click ? <FaTimes/> : <FaBars/>}
+                            </div>
+                            <i id="searchIcon" className="fas fa-search search-icon"/>
                         </div>
                     </div>
                 </div>
@@ -47,6 +54,10 @@ const Navbar = () => {
 
 const Nav = styled.div`
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
 
   .container {
     max-width: 1336px;
@@ -87,13 +98,14 @@ const Nav = styled.div`
 
       .grade2 {
 
-        select {
-          padding: 5px;
-          border-radius: 10px;
+        .nav-input {
+          display: none;
+          padding: 10px 5px;
+          border-radius: 20px;
+          border: none;
 
-          option {
-            padding: 5px 100px;
-            border: none;
+          &::placeholder {
+            font-size: 15px;
           }
         }
 
@@ -143,6 +155,76 @@ const Nav = styled.div`
     }
   }
 
+  @media (max-width: 900px){
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+      
+      .navbar {
+        
+        .grade1 {
+          
+          .nav-menu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            z-index: 99 !important;
+          }
+          
+          .nav-menu-active {
+            width: 100%;
+            height: 100vh;
+            z-index: 99 !important;
+            position: absolute;
+            top: 64px;
+            background: rgba(0, 0, 0, 0.7);
+            align-items: center;  
+            justify-content: center;
+            flex-direction: column;
+            transform: translateX(0);
+            transition: 5s ease-in-out ;
+            
+            li {
+              width: 100%;
+              text-align: center;
+              
+              &:hover {
+                background: #fff;
+                
+                a {
+                  color: #000;
+                }
+              }
+              
+              a {
+                font-size: 30px;
+                color: #fff;
+                margin: 30px 0;
+                cursor: pointer;
+                transition: 0.5s ease-in-out;
+                
+              }
+              
+            }
+          }
+        }
+        
+        .grade2 {
+          
+          .search-icon {
+            display: none;
+          }
+          
+          .menu-icon {
+            display: block;
+          }
+        }
+        
+      }
+    }
+  }
 
   @media (max-width: 768px) {
     .container {
@@ -154,7 +236,6 @@ const Nav = styled.div`
         .grade1 {
 
           ul {
-
             padding-left: 10px;
 
             a {

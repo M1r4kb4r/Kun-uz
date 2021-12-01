@@ -93,7 +93,8 @@ const ContactWrapper = styled.div`
 
 
     .contact-top-header {
-
+      margin-top: 123px;
+      
       .top-header {
         font-family: 'Montserrat';
         font-style: normal;

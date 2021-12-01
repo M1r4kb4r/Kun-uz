@@ -546,7 +546,7 @@ const HomeWrapper = styled.div`
 
     .part-one {
 
-      margin-top: 50px;
+      margin-top: 100px;
 
       .top-part {
         display: flex;
